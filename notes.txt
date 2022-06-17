@@ -1,0 +1,35 @@
+Notas do Curso Maven gerenciamento de dependências e build de aplicações Java
+
+Instalação
+Criação de projeto / Estrutura de Diretório / pom.xml
+Gerenciamento de dependências
+Processo de build com maven
+Plugins, módulos e etc
+O maven surgiu da união de duas outras ferramentas antecessoras, o ant e o ivy. O ant, 
+que ainda é utilizado na coxia, tem a função de automatizar o build do projeto, renomeando, 
+extraindo e manipulando os arquivos necessários para tal, já o ivy era responsável por gerenciar as 
+dependências do projeto, mantendo-as atualizadas e fazendo download delas quando necessário. O Maven 
+surgiu para unificar essas duas ferramentas que comumente eram utilizadas em conjunto. O maven então é 
+uma ferramenta que tem por objetivo automatizar o build do projeto Java além de fazer o gerenciamento de dependências.
+ 
+O maven trabalha com uma estrutura de diretórios padrão para organizar o projeto. Dividindo então o 
+que é build/produção do que é teste e seus respectivos recursos e arquivos de configuração. É 
+possível seguir outra estrutura, mas para isso serão necessárias alterações no pom.xlm o que não é
+ uma prática comum no mercado.
+
+É possível pesquisar sobre o código pom.xml de qualquer dependência no próprio google. Basta pesquisar 
+o nome da biblioteca acompanhado da palavra “maven”, há o ``mavenrepository.com`` que abriga os 
+códigos de diversas bibliotecas. Por padrão o maven pesquisa as dependências no seu computador e caso 
+não encontre ele baixa as dependências e bibliotecas do servidor central do próprio maven. É possível 
+alterar o repositório remoto do maven para algum que você queira indicar através das tags.
+No maven é possível executar diversas ações chamadas de goals, como compile, clean e test entre outros. 
+É através deles que o maven opera sobre a aplicação.
+ 
+Plugins: A maioria das funcionalidades do Maven está em plugins. Um plugin fornece um conjunto de objetivos 
+que podem ser executados usando a seguinte sintaxe: 
+mvn [plugin-name]:[goal-name]
+Por exemplo, um projeto Java pode ser compilado com o objetivo de compilador do plugin de compilador, 
+através da execução de mvn compiler:compile.Há plugins Maven para construção, teste, gerenciamento de 
+controle de fonte, execução de um servidor web, geração de arquivos de projeto Eclipse e muito mais. 
+Plugins são introduzidos e configurados em uma seção <plugins> de um arquivo pom.xml. Alguns plugins 
+básicos estão incluídos em todos os projetos por padrão e eles possuem configurações padrões sensíveis.
